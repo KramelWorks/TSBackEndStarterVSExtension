@@ -1,0 +1,104 @@
+{
+  "name": "TS-BackEnd-Starter",
+  "displayName": "TS_BackEnd_Starter",
+  "description": "Script Default BackEnd Starter",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:TS-BackEnd-Starter.createProject",
+    "onCommand:TS-BackEnd-Starter.createController",
+    "onCommand:TS-BackEnd-Starter.createInterface",
+    "onCommand:TS-BackEnd-Starter.createClass",
+    "onCommand:TS-BackEnd-Starter.createEnum",
+    "onCommand:TS-BackEnd-Starter.createRoute"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "TS-BackEnd-Starter.createProject",
+        "title": "Create a new TypeScript project"
+      },
+      {
+        "command": "TS-BackEnd-Starter.createController",
+        "title": "Controller"
+      },
+      {
+        "command": "TS-BackEnd-Starter.createInterface",
+        "title": "Interface"
+      },
+      {
+        "command": "TS-BackEnd-Starter.createClass",
+        "title": "Class"
+      },
+      {
+        "command": "TS-BackEnd-Starter.createEnum",
+        "title": "Enum"
+      },
+      {
+        "command": "TS-BackEnd-Starter.createRoute",
+        "title": "Route"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "TS-BackEnd-Starter.newTypeScript",
+        "label": "New TypeScript "
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "submenu": "TS-BackEnd-Starter.newTypeScript",
+          "group": "navigation"
+        }
+      ],
+      "TS-BackEnd-Starter.newTypeScript": [
+        {
+          "command": "TS-BackEnd-Starter.createController",
+          "group": "1_modification"
+        },
+        {
+          "command": "TS-BackEnd-Starter.createClass",
+          "group": "1_modification"
+        },
+        {
+          "command": "TS-BackEnd-Starter.createInterface",
+          "group": "1_modification"
+        },
+        {
+          "command": "TS-BackEnd-Starter.createEnum",
+          "group": "1_modification"
+        },
+        {
+          "command": "TS-BackEnd-Starter.createRoute",
+          "group": "1_modification"
+        }
+      ]
+    }  
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
