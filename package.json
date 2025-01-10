@@ -1,8 +1,18 @@
 {
   "name": "TS-BackEnd-Starter",
-  "displayName": "TS_BackEnd_Starter",
-  "description": "Script Default BackEnd Starter",
+  "displayName": "KramelWorks TS BackEnd Structure Starter - [Preview]",
+  "publisher": "KramelWorks",
+  "description": "Script Default BackEnd Starter - Beta Version",
   "version": "1.0.0",
+  "pricing": "Trial",
+  "icon": "KramelWorks128.png",
+  "preview": true,
+  "keywords": [
+    "typescript",
+    "backend",
+    "free",
+    "open-source"
+  ],
   "engines": {
     "vscode": "^1.96.0"
   },
